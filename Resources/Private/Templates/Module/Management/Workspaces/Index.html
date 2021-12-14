@@ -100,7 +100,7 @@
 										<button class="neos-button neos-button-danger neos-disabled" title="{neos:backend.translate(id: 'workspaces.help.cantDeletePersonalWorkspace', source: 'Modules', package: 'Neos.Neos')}" data-neos-toggle="tooltip"><i class="icon-trash icon-white"></i></button>
 									</f:then>
 									<f:else>
-										<div class="neos-button-group neos-user-menu">
+										<div class="neos-button-group neos-user-menu workspace-preview-menu">
 											<button class="neos-dropdown-toggle neos-button" data-neos-toggle="dropdown"
 													href="#" title="" data-neos-tooltip="" data-placement="left"
 													data-original-title="User Menu">
@@ -185,6 +185,11 @@
 		<f:link.action action="new" class="neos-button neos-button-primary">{neos:backend.translate(id: 'workspaces.createNewWorkspace', source: 'Modules', package: 'Neos.Neos')}</f:link.action>
 		</f:security.ifAccess>
 	</div>
+	<style>
+		.workspace-preview-menu.neos-dropdown-open .neos-dropdown-menu {
+			display: block;
+		}
+	</style>
 	<script>
 		function copyTextToClipboard(text) {
 			var textArea = document.createElement("textarea");
